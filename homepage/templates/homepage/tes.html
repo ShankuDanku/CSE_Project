@@ -1,0 +1,150 @@
+% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spida-Coders.web</title>
+    <link rel="stylesheet" href="{% static 'homepage/homepage.css' %}">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-center">
+            <h1 class="nav_heading">Spida-Coders</h1>
+        </div>
+        <div class="nav_links">
+            <ul>
+                <li><a href="/" id="scrollToTop">Home</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <br>
+        <br>
+        <div class="descAndInp">
+            <form method="POST" id="form">
+                {% csrf_token%}
+                <input class="Prod_input" type="text" placeholder="Enter Search Query" name="search" autocomplete="off">
+                <div class="btn-container"><button class="btn btn-hero" id="btn_submit">SUBMIT</button></div>
+            </form>
+        </div>
+        <div class="Prod_filter_output">
+            <div class="Filters">
+                <form method='post' id="form">
+                    {% csrf_token%}
+                    <div class="Filter_price">Filter</div>
+                    <div class="FilterP_itbmin"><input type="number" placeholder="Minimum Price" name="min" form="form"
+                    class="tb1"></div>
+                    <div class="FilterP_itbmax"><input type="number" placeholder="Maximum Price" name="max" form="form"  class="tb2"></div>
+                    <div class="FilterP_misc"><input type="text" placeholder="Miscellaneous" name="misc" form="form" class="tb3"></div>
+                    <div class="Fsort_asc">
+                        <div class="FilterP_cba"> <input type="checkbox" name="asc" form="form"></div>
+                        <div class="FilterP_la"><label>Sort Ascending</label></div>
+                    </div>
+                    <div class="Fsort_dsc">
+                        <div class="FilterP_cbd"><input type="checkbox" name="desc" form="form"></div>
+                        <div class="FilterP_ld"><label>Sort Descending</label></div>
+                    </div>
+                    <button class="filter_btn" id="btn_filter">SUBMIT</button>
+                </form>
+            </div>
+            {% for d in data %}
+                <div class="Prod_display">
+                    <div></div>
+                        <div class="Prod_photo">
+                            <img src="{{d.image}}" alt="n/a" class="Prod_photosize">
+                        </div>
+                        <div class="Prod_details">
+                            <div class="Prod_name">
+                                <p>{{d.name}}</p>
+                            </div>
+                            <div class="Prod_price">
+                                <p>{{d.price}}</p>
+                            </div>
+                            <a class="Prod_link" href="{{d.link}}" target="_blank">GO TO --></a>
+                            <div class="Prod_bname">site name</div>
+                        </div>
+                </div>
+            {% endfor%}
+
+        </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+[20:29, 12/02/2021] Sashank: {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spida-Coders.web</title>
+    <link rel="stylesheet" href="{% static 'homepage/homepage.css' %}">
+</head>
+<body>
+    <nav>
+        <img src="" alt="">
+        <div class="nav-center">
+            <h1 class="nav_heading">Spida-Coders</h1>
+        </div>
+    </nav>
+    <main>
+    <br>
+    <br>
+        <div class="descAndInp">
+            <div class="description">
+                <p><b> Enter Search Query </b></p>
+            </div>
+            <form method="POST" id="form">
+                {% csrf_token %}
+                <input class ="Prod_input" type="text" placeholder="Product Name"  name="search" form="form" autocomplete="off">
+                <button class="btn btn-hero" id="bt">Submit</button>
+            </form>
+        </div>
+        <div class="btn-container">
+            <button class="btn btn-hero" id="btn">Submit</button>
+        </div>
+        <div class="Prod_filter_output">
+        <div class="Filters">
+            <div class="Filter_price">Price</div>
+            <div class="FilterP_itbmin"><form method="post" id="form">{% csrf_token %} <input type="minimum" placeholder="Minimum Price"  class="tb1" name="min" form="form"></form></div>
+            <div class="FilterP_itbmax"><form method="post" id="form">{% csrf_token %} <input type="maximum" placeholder="Maximum Price"  class="tb2" name="max" form="form"></form></div>
+            <div class="Fsort_asc">
+                <div class="FilterP_cba"><form method="post" id="form">{% csrf_token %} <input type="checkbox" name="asc" form="form"></form></div>
+                <div class="FilterP_la"><label>Sort Ascending</label></div>
+            </div>
+            <div class="Fsort_dsc">
+                <div class="FilterP_cbd"><form method="post" id="form">{% csrf_token %}<input type="checkbox" name="desc" form="form"></form></div>
+                <div class="FilterP_ld"><label>Sort Descending</label></div>
+            </div>
+        </div>
+        <div class="Prod_output">
+            {% for d in data %}
+            <div class="Prod_display">
+                <div class="Prod_photo">
+                    <img src="{{d.image}}" alt="n/a" class="Prod_photosize">
+                </div>
+                <div class="Prod_details">
+                    <div class="Prod_name"><p>{{d.name}}</p></div>
+                    <div class="Prod_price"><p>{{d.price}}</p></div>
+                    <a class="Prod_link" href="{{d.link}}" target="_blank">GO TO --></a>
+                </div>
+            </div>
+              {% endfor %}
+        </div>
+        </div>
+    </div>
+    </main>
+</body>
+</html>
+
+
+
+
+

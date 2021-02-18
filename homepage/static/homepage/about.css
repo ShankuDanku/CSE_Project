@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@700&family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    /* background: linear-gradient(to right, #030b4e,#013664); */
+    /* background: linear-gradient(to left, #ce275c,#26308d) ;
+    background-attachment: fixed ; */
+    background: url("bg.jpg");
+    background-attachment: fixed;
+    background-position: center;
+}
+
+nav{
+    top: 0px;
+    height: 4rem;
+    width: 100%;
+    background: rgba(34, 30, 30, 0.85);
+    position: fixed;
+    box-shadow: 5px 6px 18px rgba(0, 0, 0, 0.2);
+    display: flex;
+    z-index: 2;
+}
+
+
+.Logo{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-top: 8px;
+    margin-left: 10px;
+}
+.nav-center {
+    margin-left: 30px;
+    max-width: 620px;
+    display: flex;
+}
+.nav-center h1{
+    margin: auto;
+    color: #e94560;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 2px;
+    font-size: 45px;
+    cursor: pointer;
+}
+
+.nav_links{
+    margin-left: auto;
+    margin-right: 10px;
+    margin-top: 15px;
+}
+
+.nav_links ul{
+    display: flex;
+}
+
+.nav_links ul li{
+    list-style: none;
+    font-family:"Bebas Neue",sans-serif ;
+    font-size: 28px;
+    display: inline-block;
+    padding: 0 20px;
+    font-size: 22px;
+}
+
+.nav_links ul li a{
+    text-decoration: none;
+    color: #F7F7F7;
+
+}
+.Discription{
+    height: 670px;
+    width: 1300px;
+    background-color: transparent;
+    margin:auto;
+    margin-top: 80px;
+    box-shadow: black;
+    border-radius: 1.5rem;
+    color: white;
+}
+.Disc_heading{
+    padding-top: 30px;
+    padding-left: 40px;
+    font-family: "Bebas Neue";
+    font-size: 48px;
+}
+.Disc_details{
+    margin-top: 30px;
+    padding-left: 80px;
+    padding-right: 80px;
+    font-family: "Josefin Sans";
+    font-size: 25px;
+    color: #f4f9f9;
+    font: #f4f9f9;
+}
+l1{
+    padding-left: 200px;
+}

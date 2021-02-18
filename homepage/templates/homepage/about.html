@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'homepage/about.css' %}">
+</head>
+<body>
+    <nav>
+        <div class="nav-center">
+            <h1 class="nav_heading">Spida-Coders</h1>
+        </div>
+        <div class="nav_links">
+            <ul>
+                <li><a href="#"></a></li>
+                <li><a href="/">Home</a></li>
+
+            </ul>
+        </div>
+    </nav>
+    <div class="Discription">
+        <div class="Disc_heading">About</div>
+        <div class="Disc_details"><p>This website aims to display product results from multiple e-commerce sites to help facilitate their comparison and help users make an informed choice. <br>
+This web scraping endeavor is an end-semester project made by our team spida-coders, consisting of:
+<ul class="l1">
+    <li> Anya Shine Shabeer </li>
+    <li> Harshit Sharma </li>
+	<li> Manav Gupta </li>
+	<li> Sashank Durbha </li>
+</ul>
+We are students from Bennett University, Noida. <br>
+            <b>USAGE GUIDE</b> <br>
+Our crawler is still quite rudimentary and hence, it is best to provide search queries as specific as possible and use our filters to further narrow down the results to your liking. <br>
+The miscellaneous is very helpful if you used properly. It can help find brands, model numbers etc. <br>
+            NOTE: Search query and filter specifications must be submitted at once.<br>
+            <b>TECHNICAL DETAILS</b> <br>
+The e-commerce websites that have been scraped till date are: <br>
+<ul>
+    <li> AJIO </li>
+	<li> AMAZON </li>
+	<li> EBAY </li>
+</ul>
+Due to some technical details, results are weighted towards AMAZON and EBAY. <br>
+NOTE: All product prices are in Indian Rupees(INR). EBAY displays prices in dollars, so it is converted to rupees by multiplying the value with a factor of 72.81 to deliver an approximation rounded to 2 places. EBAY also provides a range for prices, so their average is displayed. <br>
+Any feedback/suggestions are welcome.
+</p></div>
+    </div>
+</body>
+</html>

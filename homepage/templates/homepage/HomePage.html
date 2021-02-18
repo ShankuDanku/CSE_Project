@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spida-Coders.web</title>
+    <link rel="stylesheet" href="{% static 'homepage/homepage.css' %}">
+</head>
+
+<body>
+    <nav>
+        <div class="navhi">
+            <div class="nav-center">
+                <h1 class="nav_heading">Spida-Coders</h1>
+            </div>
+            <div class="nav_logo"><img src="{% static 'homepage/logo.jpg' %}" alt="" class="Nlogo_size"></div>
+        </div>
+        <div class="nav_links">
+            <ul>
+                <li><a href="/" id="scrollToTop">Home</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <br>
+        <br>
+        <div class="descAndInp">
+            <form method="POST" id="form" class="inp_form">
+                {% csrf_token%}
+                <input class="Prod_input" type="text" placeholder="Enter Search Query" name="search" autocomplete="off">
+                <div class="btn-container"><button class="btn btn-hero" id="btn_submit">SUBMIT</button></div>
+            </form>
+        </div>
+        <div class="Prod_filter_output">
+            <div class="Filters">
+                <form method='post' id="form">
+                    {% csrf_token%}
+                    <div class="Filter_price"> <b> Filter </b></div>
+                    <div class="FilterP_itbmin"><input type="number" placeholder="Minimum Price" name="min" form="form"
+                    class="tb1"></div>
+                    <div class="FilterP_itbmax"><input type="number" placeholder="Maximum Price" name="max" form="form"  class="tb2"></div>
+                    <div class="FilterP_misc"><input type="text" placeholder="Miscellaneous" name="misc" form="form" class="tb3"></div>
+                    <div class="Fsort_asc">
+                        <div class="FilterP_cba"> <input type="checkbox" name="asc" form="form"></div>
+                        <div class="FilterP_la"><label>Sort Ascending</label></div>
+                    </div>
+                    <div class="Fsort_dsc">
+                        <div class="FilterP_cbd"><input type="checkbox" name="desc" form="form"></div>
+                        <div class="FilterP_ld"><label>Sort Descending</label></div>
+                    </div>
+                </form>
+            </div>
+            <div>
+            {% for d in data %}
+                <div class="Prod_display">
+                        <div class="Prod_photo">
+                            <img src="{{d.image}}" alt="n/a" class="Prod_photosize">
+                        </div>
+                        <div class="Prod_details">
+                            <div class="Prod_name">
+                                <p>{{d.name}}</p>
+                            </div>
+                            <div class="Prod_price">
+                                <p>Rs. {{d.price}}</p>
+                            </div>
+                            <a class="Prod_link" href="{{d.link}}" target="_blank">GO TO --></a>
+                            <div class="Prod_bname">{{d.site}}</div>
+                        </div>
+                </div>
+            {% endfor%}
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>

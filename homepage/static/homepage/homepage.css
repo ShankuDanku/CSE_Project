@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@700&family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    /* background: linear-gradient(to right, #030b4e,#013664); */
+    /* background: linear-gradient(to left, #ce275c,#26308d) ;
+    background-attachment: fixed ; */
+    background-image: url('bg.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-position-y:905px;
+
+}
+
+nav {
+    top: 0px;
+    height: 4rem;
+    width: 100%;
+    background: rgba(34, 30, 30, 0.85);
+    position: fixed;
+    box-shadow: 5px 6px 18px rgba(0, 0, 0, 0.2);
+    display: flex;
+    z-index: 2;
+}
+.navhi{
+    display: flex;
+}
+.Logo_container{
+
+}
+.nav_logo{
+    margin-left: 20px;
+}
+.Nlogo_size{
+    height: 65px;
+    width: 80px;
+}
+.nav-center {
+    margin-left: 30px;
+    max-width: 620px;
+    display: flex;
+}
+.nav-center h1{
+    margin: auto;
+    color: #e94560;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 2px;
+    font-size: 45px;
+    cursor: pointer;
+}
+
+.nav_links {
+    margin-left: auto;
+    margin-right: 10px;
+    margin-top: 15px;
+}
+
+.nav_links ul {
+    display: flex;
+}
+
+.nav_links ul li {
+    list-style: none;
+    font-family:"Bebas Neue",sans-serif ;
+    font-size: 28px;
+    display: inline-block;
+    padding: 0 20px;
+    font-size: 22px;
+}
+
+.nav_links ul li a {
+    text-decoration: none;
+    color: #F7F7F7;
+
+}
+
+main {
+    align-items: center;
+    justify-content: center;
+}
+.inp_form{
+    display: flex;
+}
+.descAndInp{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    width: 70%;
+    height: 20vh;
+    display: flex;
+}
+
+.Form{
+
+}
+.inputText{
+    width: 200px;
+    height: 30px;
+}
+.Prod_input{
+    margin: auto;
+    width: 400px;
+    height: 40px;
+    padding-top: 4px;
+    font-family: "Bebas Neue",sans-serif;
+    text-transform: capitalize;
+    font-weight: 300;
+    font-size:20px;
+    background-color: transparent;
+    color: rgb(224, 224, 224);
+    border-style: groove;
+    border-color: whitesmoke;
+    background: rgba(34, 30, 30, 0.8);
+    letter-spacing: 0.25rem;
+    border-radius: 0.25;
+    padding-left: 10px;
+}
+::placeholder{
+    color: #e0e0e0;
+    font-size: 20px;
+    text-align: left;
+    padding-left: 10px;
+    letter-spacing: 00.25rem;
+}
+.btn-container{
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+}
+.btn-hero {
+    height: 35px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    background: transparent;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 0.5;
+    font-weight: 700;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    padding: 0.75rem 1.25rem;
+    margin: auto;
+    padding-bottom: 36px;
+}
+#btn_submit{
+    height: 10px;
+    margin: auto;
+}
+.btn-hero:hover{
+    color: #222;
+    background: whitesmoke;
+}
+.
+.output{
+    justify-content: center;
+    align-items: center;
+    width: 70vw;
+    margin: 50px auto 0;
+    font-family: "Roboto",sans-serif;
+    font-weight: 500;
+}
+.output_heading{
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-around;
+
+}
+.output h2 {
+    text-align: center;
+}
+.Prod_filter_output{
+    display: flex;
+    margin-top: 50px;
+}
+.Filters{
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    border-radius: 00.25rem;
+    margin-left: 20px;
+    height: 380px;
+    width: 200px;
+    background-color: rgba(300, 255, 255, 0.08);
+    box-shadow: 100px;
+
+}
+
+/* .Filters: before {
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+    filter: blur(10px);
+} */
+
+.Filter_price{
+    font-size: 35px;
+    font-family: "Bebas Neue" ,sans-serif;
+    font-size: 36px;
+    color: rgb(10, 10, 10);
+    letter-spacing: 00.5rem;
+    padding-top: 2px;
+    padding-left: 5px;
+}
+.FilterP_itbmin{
+    margin-top: 10px;
+    margin-left: 15px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+.tb1{
+    height: 30px;
+    width: 160px;
+    font-size: 14px;
+    color: whitesmoke;
+    border-radius: 00.25rem;
+    background: rgba(34, 30, 30, 0.8);
+    border-color: tomato;
+    letter-spacing: 00.1rem;
+    text-align: center;
+}
+.tb1::placeholder{
+    font-size: 14px;
+    letter-spacing: 0.15rem;
+    text-align: center;
+    justify-content: center;
+}
+.FilterP_itbmax{
+    margin-top: 10px;
+    margin-left: 15px;
+}
+.tb2{
+    height: 30px;
+    width: 160px;
+    font-size: 14px;
+    color: whitesmoke;
+    border-radius: 00.25rem;
+    background: rgba(34, 30, 30, 0.8);
+    border-color: tomato;
+    letter-spacing: 00.1rem;
+    text-align: center;
+}
+.tb2::placeholder{
+    font-size: 14px;
+    letter-spacing: 0.15rem;
+    text-align: center;
+    justify-content: center;
+}
+.FilterP_misc{
+    margin-top: 10px;
+    margin-left: 15px;
+}
+.tb3{
+    height: 30px;
+    width: 160px;
+    font-size: 14px;
+    color: whitesmoke;
+    border-radius: 00.25rem;
+    background: rgba(34, 30, 30, 0.8);
+    border-color: tomato;
+    letter-spacing: 00.1rem;
+    text-align: center
+}
+.tb3::placeholder{
+    font-size: 14px;
+    letter-spacing: 0.15rem;
+    text-align: center;
+    justify-content: center;
+}
+.Fsort_asc{
+    display: flex;
+    margin-top: 30px;
+    margin-left: 15px;
+}
+.FilterP_cba{
+    margin-top: 7px;
+}
+.FilterP_la{
+    margin-left: 10px;
+    font-size: 23px;
+    font-family: "Bebas Neue";
+}
+.Fsort_dsc{
+    display: flex;
+    margin-top: 25px;
+    margin-left: 15px;
+}
+.FilterP_cbd{
+    margin-top: 5px;
+}
+.FilterP_ld{
+    margin-left: 10px;
+    font-size: 23px;
+    font-family: "Bebas Neue";
+}
+.filter_btn{
+    margin-top: 15px;
+    margin-left: 56px;
+    height: 30px;
+    width: 80px;
+    color: #fff;
+    background-color: rgba(34, 30, 30, 0.8);
+    transition: all 0.3s linear;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    border-style: groove;
+    box-shadow: whitesmoke;
+}
+.Prod_display{
+    color: blanchedalmond;
+    margin-left: 320px;
+    width: 900px;
+    height: 350px;
+    display: flex;
+    border-style: groove;
+    border-width: 0px;
+    border-color: black;
+    border-radius: 0.5rem;
+}
+.Prod_photo{
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 220px;
+    height: 200px;
+    margin-left: 60px;
+}
+.Prod_photosize{
+    height : 250px;
+    width : 230px;
+}
+.Prod_details{
+    width: 500px;
+    height: 500px;
+    margin-top: 60px;
+    margin-left:20px;
+    text-align: center;
+    font-family: "Montserrat Alternates";
+    font-size: 20px;
+    text-transform: capitalize;
+}
+.Prod_name{
+    margin-left: 40px;
+    width: 500px;
+    height: 110px;
+    border-bottom-style: groove;
+    border-color: rgba(34, 34, 34, 0.8);
+    padding-top: 20px;
+}
+.Prod_price{
+    margin-left: 40px;
+    width: 500px;
+    height: 67px;
+    border-bottom-style: groove;
+    border-color: rgba(34, 34, 34, 0.8);
+    padding-top: 20px;
+}
+.Prod_link{
+    margin-left: 40px;
+    text-align: center;
+    width: 500px;
+    height: 72px;
+    color: #a4ebf3;
+    border-bottom-style: groove;
+    border-color: rgba(34, 34, 34, 0.8);
+    padding-top: 20px;
+}
+.Prod_bname{
+    text-align: center;
+    margin-left: 40px;
+    width: 500px;
+    height: 67px;
+    padding-top: 20px;
+}
+.sahil{
+    font-size: 80px;
+}
